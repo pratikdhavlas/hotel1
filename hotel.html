@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> चौंडेश्वरी हॉटेल - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">चौंडेश्वरी हॉटेल</a>
+      </div>
+
+
+      <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+       <li><a href="#">Portfolio</a></li>
+       <li><a href="#">Contact</a></li>
+       </ul>
+      <div class="hamburger">
+      <div class="line"></div>
+       <div class="line"></div>
+       <div class="line"></div>
+       </div>
+       </nav>
+       <style>
+    /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffdd57;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  margin-bottom: 40px;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.cta-button {
+  background-color: #ffdd57;
+  color: #333;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+   </style>
+   <script>
+    // Toggle mobile menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('toggle');
+});
+</script>
+  </header>
+<hr>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <style>
+            
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: slideInTop 1.5s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: slideInBottom 1.5s ease-in-out;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.hero-button:hover {
+  background-color: #0056b3;
+}
+
+/* Background Animation */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff0080, #7928ca, #007bff);
+  background-size: 200% 200%;
+  z-index: 1;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Keyframes for Animations */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+  
+</style>
+            <div class="hero-content">
+                <h1>Welcome to चौंडेश्वरी हॉटेल  </h1>
+                <p>Experience luxury and comfort in the heart of the city.</p>
+                   <a href="/rooms" class="btn">Explore Rooms</a>
+               
+                   </div>
+    e        <div class="hero-background"></div>
+
+     
+          </section>
+          <script>
+            fetch('/api/hotel-info')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('hotel-name').textContent = data.name;
+                    document.getElementById('description').textContent = data.description;
+                })
+                .catch(error => console.error('Error fetching hotel info:', error));
+        </script>
+          
+            <!-- Gallery Section -->
+<section class="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-container">
+    <!-- Dynamic content will be injected here by JavaScript -->
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const galleryContainer = document.querySelector(".gallery-container");
+
+  // Sample data for gallery items (can be fetched from an API)
+  const galleryItems = [
+    {
+      type: "image",
+      src: "https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=600",
+      alt: "Hotel Image 1",
+    },
+    {
+      type: "video",
+     src: "https://videos.pexels.com/video-files/855139/855139-sd_640_360_30fps.mp4",
+      alt: "Hotel Video", 
+    },
+    {
+      type: "image",
+      src: "https://media.istockphoto.com/id/1028621094/photo/service-bell-on-hotel-reception-desk.jpg?b=1&s=612x612&w=0&k=20&c=gthmepxvDo-xEPUfLCbDyXInn4NUc32BJeMvLA6cEJI=",
+      alt: "Hotel Image 2",
+    },
+   
+  ];
+
+  // Function to create gallery items
+  function createGalleryItem(item) {
+    const galleryItem = document.createElement("div");
+    galleryItem.classList.add("gallery-item");
+
+    if (item.type === "video") {
+      const video = document.createElement("video");
+      video.src = item.src;
+      video.alt = item.alt;
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.classList.add("gallery-media");
+      galleryItem.appendChild(video);
+    } else if (item.type === "image") {
+      const image = document.createElement("img");
+      image.src = item.src;
+      image.alt = item.alt;
+      image.classList.add("gallery-media");
+      galleryItem.appendChild(image);
+    }
+
+    return galleryItem;
+  }
+
+  // Append gallery items to the container
+  galleryItems.forEach((item) => {
+    galleryContainer.appendChild(createGalleryItem(item));
+  });
+});
+</script>
+<style>
+  /* Gallery Section */
+.gallery {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Animation for gallery items */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-item {
+  animation: fadeIn 0.5s ease-in-out;
+}
+</style>
+
+
+       
+       <!-- About Section -->
+<section class="about">
+  <div class="about-container">
+      <h2 class="about-title">About Us</h2>
+      <p class="about-text">Chodeshwari Hotel offers world-class amenities, exquisite dining, and a serene environment for your stay. Whether you're here for business or leisure, we ensure a memorable experience.</p>
+  </div>
+</section>
+
+<style>
+.about {
+    padding: 100px 20px;
+    background: linear-gradient(145deg, #1e1e2f, #2a2a40);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.about-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    transform: translateZ(50px);
+    animation: floatTitle 3s infinite ease-in-out;
+}
+
+@keyframes floatTitle {
+    0%, 100% {
+        transform: translateZ(50px) translateY(0);
+    }
+    50% {
+        transform: translateZ(50px) translateY(-10px);
+    }
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    transform: translateZ(30px);
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.about-image {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background: url('hotel-image.jpg') no-repeat center/cover; /* Add your image */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: rotateY(20deg) translateZ(100px);
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover {
+    transform: rotateY(0) translateZ(150px);
+}
+
+/* Parallax Effect */
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('parallax-bg.jpg') no-repeat center/cover; /* Add a parallax background */
+    z-index: -1;
+    transform: translateZ(-200px) scale(2);
+    opacity: 0.3;
+}
+</style>
+
+<script>
+  // Add interactivity and dynamic animations
+document.addEventListener('scroll', () => {
+    const aboutSection = document.querySelector('.about');
+    const scrollPosition = window.scrollY;
+    const aboutOffset = aboutSection.offsetTop;
+    const aboutHeight = aboutSection.offsetHeight;
+
+    if (scrollPosition > aboutOffset - window.innerHeight / 2 && scrollPosition < aboutOffset + aboutHeight) {
+        const parallaxBg = aboutSection.querySelector('::before');
+        const image = aboutSection.querySelector('.about-image');
+        const text = aboutSection.querySelector('.about-text');
+
+        // Parallax effect
+        const speed = 0.5;
+        const offset = (scrollPosition - aboutOffset) * speed;
+        aboutSection.style.backgroundPositionY = `${offset}px`;
+
+        // Image animation
+        image.style.transform = `rotateY(${20 - offset * 0.1}deg) translateZ(${100 + offset * 0.2}px)`;
+
+        // Text fade-in
+        if (scrollPosition > aboutOffset - window.innerHeight / 3) {
+            text.style.opacity = 1;
+        }
+    }
+});
+</script>
+    <bo>
+        
+    
+        <main>
+            <!-- Rooms Section -->
+            <section class="rooms">
+                <h2>Our Rooms</h2>
+                <div class="room-list">
+                    <div class="room-card">
+                        <img src="https://images.pexels.com/photos/2725675/pexels-photo-2725675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Standard Room">
+                        <h3>Standard Room</h3>
+                        <p>rs.1000/night</p>
+                        <a href="/contact" class="btn">Book Now</a>
+                    
+                    </div>
+                    <div class="room-card">
+                        <video width="360" height="200" autoplay loop muted>
+                            <source src="C:\Users\Pratik Dhawalshankh\Downloads\mixkit-white-luxury-boutique-hotel-room-4046-full-hd.mp4" type="video/mp4" alt="High Suite">
+                            <h3>Nice</h3>
+                            <p>rs.2000/nig</p>
+                          </video>
+                          <h3>Nice</h3>
+                        <p>rs.2000/night</p>
+                           <a href="/contact" class="btn">Book Now</a>
+                           
+                    </div>
+                    <div class="room-card">
+                        <img src="https://images.pexels.com/photos/210604/pexels-photo-210604.jpeg?auto=compress&cs=tinysrgb&w=600" alt="High Suite">
+                        <h3>Suite</h3>
+                        <p>rs.4000/night</p>
+                        <a href="/contact" class="btn">Book Now</a>
+
+                    </div>
+                </div>
+
+            </section>
+            
+
+        </main>
+        <b>
+            
+            <main>
+                <!-- Contact Section -->
+               <!-- Contact Section -->
+<section class="contact">
+  <h2>Contact Us</h2>
+  <form id="contactForm" class="contact-form">
+      <div class="form-group">
+          <input type="text" id="name" name="name" required>
+          <label for="name">Name</label>
+      </div>
+      <div class="form-group">
+          <input type="email" id="email" name="email" required>
+          <label for="email">Email</label>
+      </div>
+      <div class="form-group">
+          <textarea id="message" name="message" required></textarea>
+          <label for="message">Message</label>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+  </form>
+</section>
+
+<!-- Add this in your CSS file or within a <style> tag -->
+<style>
+  .contact {
+      padding: 50px 20px;
+      background: linear-gradient(145deg, #1e1e2f, #2a2a40);
+      color: #fff;
+      text-align: center;
+  }
+
+  .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+  }
+
+  .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      perspective: 1000px;
+  }
+
+  .form-group {
+      position: relative;
+      margin-bottom: 20px;
+      transform-style: preserve-3d;
+  }
+
+  .form-group input,
+  .form-group textarea {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #444;
+      border-radius: 10px;
+      background: transparent;
+      color: #fff;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      transform: translateZ(20px);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+      border-color: #00ff88;
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+      transform: translateZ(30px);
+  }
+
+  .form-group label {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 0 5px;
+      background: #1e1e2f;
+      color: #888;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      transform: translateZ(20px);
+  }
+
+  .form-group input:focus ~ label,
+  .form-group textarea:focus ~ label,
+  .form-group input:not(:placeholder-shown) ~ label,
+  .form-group textarea:not(:placeholder-shown) ~ label {
+      top: -10px;
+      left: 10px;
+      font-size: 0.8rem;
+      color: #00ff88;
+      transform: translateZ(30px);
+  }
+
+  .btn {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      background: #00ff88;
+      color: #1e1e2f;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      transform: translateZ(20px);
+  }
+
+  .btn:hover {
+      background: #00cc66;
+      transform: translateZ(30px) scale(1.05);
+  }
+</style>
+
+<!-- Add this in your JavaScript file or within a <script> tag -->
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Thank you for contacting us!');
+      this.reset();
+  });
+</script>
+                
+            </main>
+                        
+            <footer>
+                <p>&copy; 2025 Chodeshwari Hotel. All rights reserved.</p>
+            </footer>   
+</body>
+</html>
